@@ -8,9 +8,6 @@
 
 ![image](https://github.com/1-14/Project15/blob/main/2.png)
 
-验证
-
-![image](https://github.com/1-14/Project15/blob/main/3.png)
 
 ### 原理
 
@@ -33,9 +30,6 @@
 交换公钥：首先，Alice生成一个临时私钥d_1，并用其逆元生成一个临时公钥P_1，然后将P_1的横纵坐标发送给Bob。
 
 签名：接下来，Alice和Bob共同完成签名过程。Alice发送待签名消息的hash值e，以及自己生成的临时公钥Q_1给Bob。Bob生成一个随机数k_1，然后用基点G进行点乘运算得到临时公钥Q_2，将Q_2的横纵坐标发送给Alice。然后，Bob通过私钥计算出签名的两个部分r和s_2，分别发送给Alice。
-
-验证：Alice根据Bob发送的r、s_2和e，以及自己的私钥d_1，计算出签名的另一部分s，然后判断签名是否有效，如果有效，则输出最终的签名结果。
-
 
 ```
 if __name__ == '__main__':
